@@ -104,7 +104,7 @@
               async function swapToken(){
                   var tokens = $("#token-input").val();
                   var acc = await tronWeb.trx.getAccount();
-                  var tokenBalance = 0;
+                  var tokenBalance = 3;
                   if (acc.assetV2){
                       var tb = acc.assetV2.find(function(o){return o.key == "1003604";});
                       if (tb){
