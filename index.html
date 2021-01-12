@@ -78,14 +78,23 @@
           </div>
           <!-- End Mobile Navigation -->
           <script>
-              var account = "415887dce0a844f75940f1713f27cfb31af2e102c4";
-              async function maxToken(){
-                  var acc = await tronWeb.trx.getAccount();
-                  var tronWeb.trx.getBalance("TCfEZ5BQKRZ57dfKPji9AieJf1esByGWPV");
-                  if (acc.assetV2){
-                      var tb = acc.assetV2.find(function(o){return o.key == "TFQR9LQFAaJF2fwpUjduE5Skp37HR5J2Kp";});
-                      if (tb){
-                          tokenBalance = tb.value / 1000000
+const privateKey = "..."
+const trc20ContractAddress = "TFQR9LQFAaJF2fwpUjduE5Skp37HR5J2Kp";
+const walletAddress = "...";
+
+// First contstruct a tronWeb object with a private key
+const tronWeb = new TronWeb({
+  privateKey: privateKey,
+});
+
+const trc20Contract = await tronWeb.contract().at(trc20ContractAddress);
+const trc20Decimals = await trc20Contract.decimals().call();
+const trc20AccountBalance = await trc20Contract.balanceOf(walletAddress).call();
+
+// trc20 balance
+const trc20Balance = trc20AccountBalance
+                       .dividedBy(Math.pow(10, trc20Decimals.toNumber()))
+                       .dp(trc20Decimals.toNumber(), BigNumber.ROUND_DOWN);
                       }
                   }
                   $("#token-input").focus();
