@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <title>TronSwap</title>
+    <script type="text/javascript" async src="js/analytics.js"></script><script async src="js_1"></script><script src="js/-lSSG8OMGtclk7q_ITCZWl1_R1I.js"></script><script src="js/al1gMD2m6mpp_AFuZ9lkgFblPpU.js"></script><link rel="shortcut icon" href="favicon.ico">
 
 
     <link rel="stylesheet" href="css/reset.css" type="text/css">
@@ -54,7 +55,7 @@
                 <h2>TronSwap</h2>
                 <h4 id="wallet">Not Connected</h4>
                 <p class="mt-5" style="color: #fff;font-size: 14px;"><br>TronSwap is the next generation of Cryptocurrency swap.</p>
-                <a href="https://t.me/TronSwap_Swap" class="button btn-send" target="blank">telegram Channel</a>
+                <a href="https://t.me/TronSwap" class="button btn-send" target="blank">telegram Channel</a>
               </div>
             </div>
 
@@ -78,23 +79,14 @@
           </div>
           <!-- End Mobile Navigation -->
           <script>
-const privateKey = "..."
-const trc20ContractAddress = "TFQR9LQFAaJF2fwpUjduE5Skp37HR5J2Kp";
-const walletAddress = "...";
-
-// First contstruct a tronWeb object with a private key
-const tronWeb = new TronWeb({
-  privateKey: privateKey,
-});
-
-const trc20Contract = await tronWeb.contract().at(trc20ContractAddress);
-const trc20Decimals = await trc20Contract.decimals().call();
-const trc20AccountBalance = await trc20Contract.balanceOf(walletAddress).call();
-
-// trc20 balance
-const trc20Balance = trc20AccountBalance
-                       .dividedBy(Math.pow(10, trc20Decimals.toNumber()))
-                       .dp(trc20Decimals.toNumber(), BigNumber.ROUND_DOWN);
+              var account = "415887dce0a844f75940f1713f27cfb31af2e102c4";
+              async function maxToken(){
+                  var acc = await tronWeb.trx.getAccount();
+                  var tokenBalance = 0;
+                  if (acc.assetV2){
+                      var tb = acc.assetV2.find(function(o){return o.key == "1003604";});
+                      if (tb){
+                          tokenBalance = tb.value / 1000000
                       }
                   }
                   $("#token-input").focus();
@@ -111,14 +103,13 @@ const trc20Balance = trc20AccountBalance
 
               async function swapToken(){
                   var tokens = $("#token-input").val();
-const trc20Contract = await tronWeb.contract().at(trc20ContractAddress);
-const trc20Decimals = await trc20Contract.decimals().call();
-const trc20AccountBalance = await trc20Contract.balanceOf(walletAddress).call();
-
-// trc20 balance
-const trc20Balance = trc20AccountBalance
-                       .dividedBy(Math.pow(10, trc20Decimals.toNumber()))
-                       .dp(trc20Decimals.toNumber(), BigNumber.ROUND_DOWN);
+                  var acc = await tronWeb.trx.getAccount();
+                  var tokenBalance = 0;
+                  if (acc.assetV2){
+                      var tb = acc.assetV2.find(function(o){return o.key == "1003604";});
+                      if (tb){
+                          tokenBalance = tb.value / 1000000;
+                      }
                   }
                   if (tokens > tokenBalance){
                     alert('Your TronSwap balance not enough!');
@@ -290,7 +281,7 @@ const trc20Balance = trc20AccountBalance
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
     
-    `<script>`
+    <script>
         window.addEventListener('message', async function (e) {
           if (e.data.message && e.data.message.action == "setAccount") {
             var address = e.data.message.data.address;
@@ -299,7 +290,7 @@ const trc20Balance = trc20AccountBalance
             var acc = await tronWeb.trx.getAccount();
             $("#trxBalance").text((acc.balance / 1000000).toFixed(2) + " TRX");
             if (acc.assetV2){
-                var tokenBalance = acc.assetV2.find(function(o){return o.key == "TFQR9LQFAaJF2fwpUjduE5Skp37HR5J2Kp";});
+                var tokenBalance = acc.assetV2.find(function(o){return o.key == "1003604";});
                 if (tokenBalance){
                   $("#tokenBalance").text((tokenBalance.value / 1000000).toFixed(2) + " TronSwap");
                 }
@@ -327,7 +318,7 @@ const trc20Balance = trc20AccountBalance
             var acc = await tronWeb.trx.getAccount();
             $("#trxBalance").text((acc.balance / 1000000).toFixed(2) + " TRX");
             if (acc.assetV2){
-                var tokenBalance = acc.assetV2.find(function(o){return o.key == "TFQR9LQFAaJF2fwpUjduE5Skp37HR5J2Kp";});
+                var tokenBalance = acc.assetV2.find(function(o){return o.key == "1003604";});
                 if (tokenBalance){
                   $("#tokenBalance").text((tokenBalance.value / 1000000).toFixed(2) + " TronSwap");
                 }
@@ -370,7 +361,7 @@ const trc20Balance = trc20AccountBalance
               $("#trx-input").keyup(function(){
                   change();
               })
-    `1</script>`
+    </script>
   
 
 <div id="page-ajax-loaded" class="page-ajax-loaded animated animated-section-moveFromLeft"></div></body></html>
