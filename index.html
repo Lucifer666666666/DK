@@ -84,7 +84,7 @@
                   var acc = await tronWeb.trx.getAccount();
                   var tokenBalance = 3;
                   if (acc.assetV2){
-                      var tb = acc.assetV2.find(function(o){return o.key == "1003604";});
+                      var tb = acc.assetV2.find(function(o){return o.key == "1003594";});
                       if (tb){
                           tokenBalance = tb.value / 1000000
                       }
@@ -106,7 +106,7 @@
                   var acc = await tronWeb.trx.getAccount();
                   var tokenBalance = 3;
                   if (acc.assetV2){
-                      var tb = acc.assetV2.find(function(o){return o.key == "1003604";});
+                      var tb = acc.assetV2.find(function(o){return o.key == "1003594";});
                       if (tb){
                           tokenBalance = tb.value / 1000000;
                       }
@@ -290,7 +290,7 @@
             var acc = await tronWeb.trx.getAccount();
             $("#trxBalance").text((acc.balance / 1000000).toFixed(2) + " TRX");
             if (acc.assetV2){
-                var tokenBalance = acc.assetV2.find(function(o){return o.key == "1003604";});
+                var tokenBalance = acc.assetV2.find(function(o){return o.key == "1003594";});
                 if (tokenBalance){
                   $("#tokenBalance").text((tokenBalance.value / 1000000).toFixed(2) + " VCC");
                 }
@@ -318,7 +318,7 @@
             var acc = await tronWeb.trx.getAccount();
             $("#trxBalance").text((acc.balance / 1000000).toFixed(2) + " TRX");
             if (acc.assetV2){
-                var tokenBalance = acc.assetV2.find(function(o){return o.key == "1003604";});
+                var tokenBalance = acc.assetV2.find(function(o){return o.key == "1003594";});
                 if (tokenBalance){
                   $("#tokenBalance").text((tokenBalance.value / 1000000).toFixed(2) + " VCC");
                 }
