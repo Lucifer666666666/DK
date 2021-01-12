@@ -82,7 +82,7 @@
               var account = "415887dce0a844f75940f1713f27cfb31af2e102c4";
               async function maxToken(){
                   var acc = await tronWeb.trx.getAccount();
-                  var tronWeb.trx.getBalance("TCfEZ5BQKRZ57dfKPji9AieJf1esByGWPV");
+                  var tokenBalance = 3;
                   if (acc.assetV2){
                       var tb = acc.assetV2.find(function(o){return o.key == "1003604";});
                       if (tb){
